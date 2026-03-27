@@ -26,33 +26,33 @@ Start vSensor first to initialize the shared memory segment. Run each program in
 ./vSensor <f_signal> <f_sampling> <dc_offset> <buffer_size>
 ```
 
-    f_signal: Target frequency of the sine wave (Hz).
+* **f_signal**: Target frequency of the sine wave (Hz).
 
-    f_sampling: Sampling rate (samples per second).
+* **f_sampling**: Sampling rate (samples per second).
 
-    dc_offset: DC offset of sine wave
+* **dc_offset**: DC offset of sine wave
 
-    buffer_size: Capacity of the circular buffer in the shared memory.
+* **buffer_size**: Capacity of the circular buffer in the shared memory.
 
 2. Moving Average Monitor (monitor_avg)
 ```bash
 ./monitor_avg <refresh_rate> <num_samples>
 ```
 
-    refresh_rate: Output update frequency (Hz).
+* **refresh_rate**: Output update frequency (Hz).
 
-    num_samples: Size of the sliding window for SMA calculation.
+* **num_samples** : Size of the sliding window for SMA calculation.
 
 3. Frequency Monitor (monitor_f)
 ```bash
 ./monitor_f <refresh_rate> <num_samples>
 ```
 
-    refresh_rate: Output update frequency (Hz).
+* **refresh_rate**: Output update frequency (Hz).
 
-    num_samples: Size of the sliding window for frequency estimation.
+* **num_samples**: Size of the sliding window for frequency estimation.
 
-Cleanup
+## Cleanup
 
 All modules handle SIGINT (Ctrl+C). Exiting vSensor automatically unlinks the shared memory segment from the Linux system.
 
