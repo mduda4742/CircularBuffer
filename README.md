@@ -16,12 +16,15 @@ This system demonstrates a low-latency Producer-Consumer architecture. A virtual
 mkdir build && cd build
 cmake ..
 make
+```
 
-Usage
+## Usage
 
 Start vSensor first to initialize the shared memory segment. Run each program in a separate terminal window.
 1. Signal Generator (vSensor)
+```bash
 ./vSensor <f_signal> <f_sampling> <dc_offset> <buffer_size>
+```
 
     f_signal: Target frequency of the sine wave (Hz).
 
@@ -32,15 +35,18 @@ Start vSensor first to initialize the shared memory segment. Run each program in
     buffer_size: Capacity of the circular buffer in the shared memory.
 
 2. Moving Average Monitor (monitor_avg)
+```bash
 ./monitor_avg <refresh_rate> <num_samples>
+```
 
     refresh_rate: Output update frequency (Hz).
 
     num_samples: Size of the sliding window for SMA calculation.
 
 3. Frequency Monitor (monitor_f)
-
+```bash
 ./monitor_f <refresh_rate> <num_samples>
+```
 
     refresh_rate: Output update frequency (Hz).
 
