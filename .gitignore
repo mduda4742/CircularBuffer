@@ -1,0 +1,29 @@
+# --- Build Output ---
+build/
+bin/
+obj/
+
+# --- Executables ---
+vSensor
+monitor_avg
+monitor_f
+*.out
+*.exe
+
+# --- Object & Library Files ---
+*.o
+*.a
+*.so
+*.so.*
+
+# --- IDE & Editors ---
+.vscode/
+.idea/
+*.swp
+*.save
+*.sublime-project
+*.sublime-workspace
+
+# --- System Garbage ---
+.DS_Store
+Thumbs.db
